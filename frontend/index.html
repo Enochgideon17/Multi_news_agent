@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXUS — Multi-Agent News Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- SCANLINES -->
+  <div class="scanlines"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">NEXUS</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <div class="nav-center">
+      <div class="live-indicator">
+        <span class="live-dot"></span>
+        <span>LIVE SYSTEM</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="nav-stat" id="navTime">--:--:--</span>
+      <span class="nav-sep">|</span>
+      <span class="nav-stat">3 AGENTS</span>
+      <span class="nav-sep">|</span>
+      <span class="nav-stat">4 MCP</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text">NEXUS</div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        MULTI-AGENT INTELLIGENCE PIPELINE
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line line1">DAILY</span>
+        <span class="title-line line2">BRIEF</span>
+        <span class="title-line line3">GEN<span class="title-accent">_</span>ERATOR</span>
+      </h1>
+      <p class="hero-sub">
+        Three autonomous agents. Four real-time data streams.<br/>
+        One comprehensive intelligence brief — generated in seconds.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">FastAPI</span>
+        <span class="chip">MCP Protocol</span>
+        <span class="chip">LLM-Powered</span>
+        <span class="chip">Real-time</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit-system">
+        <div class="orbit orbit1">
+          <div class="orbit-node node-c" data-label="CONTEXTUALIST">C</div>
+        </div>
+        <div class="orbit orbit2">
+          <div class="orbit-node node-s" data-label="SCOUT">S</div>
+        </div>
+        <div class="orbit orbit3">
+          <div class="orbit-node node-p" data-label="PUBLISHER">P</div>
+        </div>
+        <div class="orbit-center">
+          <div class="center-pulse"></div>
+          <span>AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <!-- <span>SCROLL TO CONFIGURE</span> -->
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- PIPELINE STRIP -->
+  <section class="pipeline-strip">
+    <div class="pipeline-track">
+      <div class="pipeline-agent" data-agent="contextualist">
+        <div class="agent-num">01</div>
+        <div class="agent-bar bar-c"></div>
+        <div class="agent-info">
+          <div class="agent-name-label">CONTEXTUALIST</div>
+          <div class="agent-role">Context Gathering</div>
+        </div>
+        <div class="agent-signal"></div>
+      </div>
+      <div class="pipeline-arrow">
+        <svg width="60" height="20" viewBox="0 0 60 20">
+          <path d="M0 10 L50 10 M42 3 L52 10 L42 17" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+        <span class="arrow-label">context_data</span>
+      </div>
+      <div class="pipeline-agent" data-agent="scout">
+        <div class="agent-num">02</div>
+        <div class="agent-bar bar-s"></div>
+        <div class="agent-info">
+          <div class="agent-name-label">SCOUT</div>
+          <div class="agent-role">Signal Aggregation</div>
+        </div>
+        <div class="agent-signal"></div>
+      </div>
+      <div class="pipeline-arrow">
+        <svg width="60" height="20" viewBox="0 0 60 20">
+          <path d="M0 10 L50 10 M42 3 L52 10 L42 17" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+        <span class="arrow-label">full_data</span>
+      </div>
+      <div class="pipeline-agent" data-agent="publisher">
+        <div class="agent-num">03</div>
+        <div class="agent-bar bar-p"></div>
+        <div class="agent-info">
+          <div class="agent-name-label">PUBLISHER</div>
+          <div class="agent-role">Brief Synthesis</div>
+        </div>
+        <div class="agent-signal"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MCP SERVERS -->
+  <section class="mcp-section">
+    <div class="section-header">
+      <div class="section-label">MCP SERVER NETWORK</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="mcp-grid">
+      <div class="mcp-card" data-server="weather">
+        <div class="mcp-top">
+          <div class="mcp-icon">🌤</div>
+          <div class="mcp-ring"></div>
+        </div>
+        <div class="mcp-name">WEATHER</div>
+        <div class="mcp-file">weather_server.py</div>
+        <div class="mcp-status-row"><div class="status-led"></div><span>CONNECTED</span></div>
+        <div class="mcp-data-stream"><div class="stream-bar"></div></div>
+      </div>
+      <div class="mcp-card" data-server="finance">
+        <div class="mcp-top">
+          <div class="mcp-icon">💹</div>
+          <div class="mcp-ring"></div>
+        </div>
+        <div class="mcp-name">FINANCE</div>
+        <div class="mcp-file">finance_server.py</div>
+        <div class="mcp-status-row"><div class="status-led"></div><span>CONNECTED</span></div>
+        <div class="mcp-data-stream"><div class="stream-bar"></div></div>
+      </div>
+      <div class="mcp-card" data-server="news">
+        <div class="mcp-top">
+          <div class="mcp-icon">📰</div>
+          <div class="mcp-ring"></div>
+        </div>
+        <div class="mcp-name">NEWS</div>
+        <div class="mcp-file">news_server.py</div>
+        <div class="mcp-status-row"><div class="status-led"></div><span>CONNECTED</span></div>
+        <div class="mcp-data-stream"><div class="stream-bar"></div></div>
+      </div>
+      <div class="mcp-card" data-server="media">
+        <div class="mcp-top">
+          <div class="mcp-icon">📡</div>
+          <div class="mcp-ring"></div>
+        </div>
+        <div class="mcp-name">MEDIA</div>
+        <div class="mcp-file">media_server.py</div>
+        <div class="mcp-status-row"><div class="status-led"></div><span>CONNECTED</span></div>
+        <div class="mcp-data-stream"><div class="stream-bar"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section">
+    <div class="section-header">
+      <div class="section-label">CONFIGURE BRIEF PARAMETERS</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="form-container">
+      <div class="form-fields">
+        <div class="input-group">
+          <div class="input-icon-box">🌤</div>
+          <div class="input-wrap">
+            <label class="input-label">CITY FOR WEATHER</label>
+            <input type="text" id="city" class="nexus-input" placeholder="Bengaluru" autocomplete="off"/>
+            <div class="input-underline"></div>
+          </div>
+          <div class="input-tag">weather_server</div>
+        </div>
+        <div class="input-group">
+          <div class="input-icon-box">💹</div>
+          <div class="input-wrap">
+            <label class="input-label">STOCK SYMBOL</label>
+            <input type="text" id="stock" class="nexus-input" placeholder="IBM" autocomplete="off"/>
+            <div class="input-underline"></div>
+          </div>
+          <div class="input-tag">finance_server</div>
+        </div>
+        <div class="input-group">
+          <div class="input-icon-box">📰</div>
+          <div class="input-wrap">
+            <label class="input-label">NEWS QUERY</label>
+            <input type="text" id="news_query" class="nexus-input" placeholder="world news" autocomplete="off"/>
+            <div class="input-underline"></div>
+          </div>
+          <div class="input-tag">news_server</div>
+        </div>
+        <div class="input-group">
+          <div class="input-icon-box">📡</div>
+          <div class="input-wrap">
+            <label class="input-label">MEDIA QUERY</label>
+            <input type="text" id="media_query" class="nexus-input" placeholder="news" autocomplete="off"/>
+            <div class="input-underline"></div>
+          </div>
+          <div class="input-tag">media_server</div>
+        </div>
+      </div>
+      <div class="form-action">
+        <button class="btn-generate" id="generateBtn" onclick="runPipeline()">
+          <span class="btn-text">GENERATE DAILY BRIEF</span>
+          <span class="btn-arrow">→</span>
+          <div class="btn-ripple" id="btnRipple"></div>
+        </button>
+        <div class="form-note">Pipeline: Contextualist → Scout → Publisher<br/>Backend: FastAPI + 4 MCP Servers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTPUT -->
+  <section class="output-section">
+    <div class="section-header">
+      <div class="section-label">BRIEF OUTPUT</div>
+      <div class="section-line"></div>
+      <div class="output-actions">
+        <button class="btn-action" onclick="copyBrief()">⧉ COPY</button>
+        <button class="btn-action" onclick="downloadBrief()">↓ .MD</button>
+      </div>
+    </div>
+    <div class="output-panel">
+      <div class="output-state" id="stateIdle">
+        <div class="idle-glyph">NEXUS</div>
+        <div class="idle-text">AWAITING PARAMETERS</div>
+        <div class="idle-sub">Fill in the form above and hit Generate</div>
+      </div>
+      <div class="output-state hidden" id="stateLoading">
+        <div class="loading-agents">
+          <div class="load-agent" id="la1">
+            <div class="la-icon lc">C</div>
+            <div class="la-content">
+              <div class="la-name lc-name">CONTEXTUALIST</div>
+              <div class="la-task">Fetching weather &amp; finance context...</div>
+              <div class="la-bar"><div class="la-fill lc-fill" id="fill1"></div></div>
+            </div>
+            <div class="la-check" id="check1">✓</div>
+          </div>
+          <div class="load-agent" id="la2">
+            <div class="la-icon ls">S</div>
+            <div class="la-content">
+              <div class="la-name ls-name">SCOUT</div>
+              <div class="la-task">Aggregating news &amp; media signals...</div>
+              <div class="la-bar"><div class="la-fill ls-fill" id="fill2"></div></div>
+            </div>
+            <div class="la-check" id="check2">✓</div>
+          </div>
+          <div class="load-agent" id="la3">
+            <div class="la-icon lp">P</div>
+            <div class="la-content">
+              <div class="la-name lp-name">PUBLISHER</div>
+              <div class="la-task">Synthesizing daily brief...</div>
+              <div class="la-bar"><div class="la-fill lp-fill" id="fill3"></div></div>
+            </div>
+            <div class="la-check" id="check3">✓</div>
+          </div>
+        </div>
+        <div class="loading-log" id="loadingLog"></div>
+      </div>
+      <div class="output-state hidden" id="stateResult">
+        <div class="result-meta-bar">
+          <span class="result-badge">GENERATED</span>
+          <span class="rmeta" id="rCity"></span>
+          <span class="rmeta" id="rStock"></span>
+          <span class="rmeta" id="rTime"></span>
+        </div>
+        <div class="result-body" id="resultBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">[NEXUS]</div>
+    <div class="footer-center">Multi-Agent News Intelligence · FastAPI + MCP</div>
+    <div class="footer-right">Contextualist · Scout · Publisher</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
