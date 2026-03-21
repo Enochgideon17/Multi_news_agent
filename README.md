@@ -62,7 +62,7 @@ Shared components such as:
 ### Root Components
 
 * `main.py` → Application entry point and request orchestration
-* `.env` → Environment configuration (API keys / secrets)
+* `.env` → Environment configuration (API keys )
 * `requirements.txt` → Python dependencies
 
 ---
